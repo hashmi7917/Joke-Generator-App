@@ -1,9 +1,5 @@
 const getJokeBtn = document.querySelector('#btn');
-
-window.addEventListener('load', () => {
-  getNewJoke();
-});
-
+const para = document.querySelector('#jokes');
 const getNewJoke = () => {
   // HTTPS Request
   const xhr = new XMLHttpRequest();
@@ -13,12 +9,16 @@ const getNewJoke = () => {
   // fetching data
   xhr.onreadystatechange = function () {
     if (this.readyState === 4 && this.status === 200) {
-      const data = JSON.parse(this.responseText);
-      const para = document.querySelector('#jokes');
-      para.innerHTML = `<strong>${data.value}</strong>`;
+      const data = JSON.parse(this.responseText).value;
+      para.innerHTML = data;
+    } else {
+      para.innerHTML = 'Something went wrong! 404';
     }
   };
   xhr.send();
 };
 
+window.addEventListener('load', () => {
+  getNewJoke();
+});
 getJokeBtn.addEventListener('click', getNewJoke);
