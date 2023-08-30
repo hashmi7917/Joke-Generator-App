@@ -3,7 +3,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  background-color: salmon;
+  background-color: rgb(122, 223, 59);
 }
 .container {
   width: 80%;
@@ -26,8 +26,8 @@ body {
 }
 .card {
   background-color: white;
-  width: 250px;
-  min-height: 404.5px;
+  width: 300px;
+  min-height: 304.5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,6 +76,8 @@ body {
  /* custom */
 }
 .card p {
+  padding: 20px;
+  text-align: center;
   margin: 15px 0px 0px 0px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 100;
@@ -96,12 +98,14 @@ body {
   border: none;
   background-color: salmon;
   width: 80%;
-  margin: 10px auto;
+  margin: 40px auto;
   padding: 15px 30px;
   color: white;
   font-family: 'Noto Sans KR', sans-serif;
   text-transform: uppercase;
   border-radius: 8px;
+  
+  
 }
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes line-show {
